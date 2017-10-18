@@ -3,4 +3,31 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- 前景色-->
+    <color name="fg_common_white">#D9E8E7</color>
+    <color name="whiteThemeStatusColor">#b0b0b0</color>
+    <color name="alphaWhite">#60ffffff</color>
+    <color name="alphaBlack">#30ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="color_010101">#010101</color>
+    <color name="transparent">#00000000</color>
+    <color name="half_transparent">#90000000</color>
+    <color name="lighter_transparent">#30000000</color>
+    <color name="alpha_color_f9f9f9">#80f9f9f9</color>
+    <color name="color_f3f5f0">#f3f5f0</color>
+
+    <color name="color_000">#000000</color>
+    <color name="color_111">#111111</color>
+    <color name="color_333">#333333</color>
+    <color name="color_666">#666666</color>
+    <color name="color_bbb">#bbbbbb</color>
+    <color name="color_888">#888888</color>
+    <color name="color_999">#999999</color>
+    <color name="color_ccc">#cccccc</color>
+    <color name="color_ddd">#dddddd</color>
+    <color name="color_aaa">#aaaaaa</color>
+    <color name="color_fff">#ffffff</color>
+    <color name="color_eee">#eeeeee</color>
 </resources>

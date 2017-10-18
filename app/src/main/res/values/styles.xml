@@ -8,4 +8,60 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--不带蒙层的dialog-->
+    <style name="commonDialogNoBackground" parent="@android:style/Theme.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!--自定义水平progressbar样式-->
+    <style name="myProgressBarStyle" parent="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_style</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:minHeight">3dp</item>
+        <item name="android:maxHeight">3dp</item>
+    </style>
+
+    <!--自定义对话框-->
+    <style name="commonDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowEnterAnimation">@anim/fade_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_scale_out</item>
+        <item name="android:windowMinWidthMajor">85%</item>
+        <item name="android:windowMinWidthMinor">85%</item>
+    </style>
+    <!--toolbar通用样式-->
+    <style name="baseToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+    <!--底部弹出的选择框样式-->
+    <style name="bottomChoiceDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+    </style>
+    <!--底部选择框的弹出样式-->
+    <style name="bottomShowAnimStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowEnterAnimation">@anim/pop_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_bottom</item>
+    </style>
+    <!-- 水平progressBarStyle进度颜色 -->
+    <style name="horizontalProgressBarStyle" parent="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_bar_color</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:minHeight">@dimen/margin_1</item>
+        <item name="android:maxHeight">@dimen/margin_1</item>
+    </style>
 </resources>

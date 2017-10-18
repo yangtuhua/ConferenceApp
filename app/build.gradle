@@ -146,4 +146,6 @@ dependencies {
     compile "com.hyman:flowlayout-lib:$rootProject.ext.flowlayoutVersion"
     //图片压缩类库
     compile "top.zibin:Luban:$rootProject.ext.imageCompressVersion"
+    //activeAndroid数据库
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
 }
