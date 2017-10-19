@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.tuhua.conference.MainActivity">
+    tools:context="com.tuhua.conference.view.home.MainActivity">
 
     <FrameLayout
         android:id="@+id/content"
@@ -23,8 +22,13 @@
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="@string/title_home"/>
+            android:text="@string/title_home" />
 
+        <Button
+            android:id="@+id/bt_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地图" />
     </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
@@ -33,6 +37,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
-        app:menu="@menu/navigation"/>
+        app:menu="@menu/navigation" />
 
 </LinearLayout>

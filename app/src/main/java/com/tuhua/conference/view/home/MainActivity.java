@@ -1,15 +1,21 @@
-package com.tuhua.conference;
+package com.tuhua.conference.view.home;
 
-import android.os.Bundle;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import com.tuhua.conference.R;
+import com.tuhua.conference.base.activity.BaseActivity;
 
-    private TextView mTextMessage;
+import butterknife.BindView;
+import butterknife.OnClick;
+
+public class MainActivity extends BaseActivity {
+
+    @BindView(R.id.message)
+    TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -33,13 +39,24 @@ public class MainActivity extends AppCompatActivity {
     };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected void initInject() {
 
-        mTextMessage = (TextView) findViewById(R.id.message);
+    }
+
+    @Override
+    protected int getLayout() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initEventAndSimpleData() {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
+
+    @OnClick(R.id.bt_map)
+    public void map() {
+        startActivity(new Intent(this, MapActivity.class));
+    }
 }
