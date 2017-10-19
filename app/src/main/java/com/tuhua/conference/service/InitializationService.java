@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.Nullable;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.Utils;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
@@ -17,6 +18,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
+ * 初始化操作的服务
  * Created by yangtufa on 2017/10/19.
  */
 
@@ -30,9 +32,6 @@ public class InitializationService extends IntentService {
         context.startService(intent);
     }
 
-    /**
-     * Creates an IntentService.  Invoked by your subclass's constructor.
-     */
     public InitializationService() {
         super("InitializationService");
     }
@@ -42,6 +41,8 @@ public class InitializationService extends IntentService {
         initUtil();
 
         initEMSDK();
+
+        LogUtils.e("初始化完成！");
     }
 
     /***初始化工具类*/

@@ -42,7 +42,6 @@
         <meta-data
             android:name="EASEMOB_APPKEY"
             android:value="a790699763#conference" />
-
         <service
             android:name="com.hyphenate.chat.EMChatService"
             android:exported="true" />
@@ -62,6 +61,9 @@
             </intent-filter>
         </receiver>
         <!--环信配置end-->
+
+        <!--初始化操作服务-->
+        <service android:name=".service.InitializationService"/>
 
         <activity
             android:name=".view.home.MainActivity"
