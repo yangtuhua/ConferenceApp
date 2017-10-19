@@ -17,7 +17,7 @@ import android.widget.TextView;
 import com.blankj.utilcode.util.ToastUtils;
 import com.facebook.stetho.common.LogUtil;
 import com.tuhua.conference.R;
-import com.tuhua.conference.base.app.EntApplication;
+import com.tuhua.conference.base.app.ConApplication;
 import com.tuhua.conference.base.mvp.BaseView;
 import com.tuhua.conference.dagger.component.DaggerFragmentComponent;
 import com.tuhua.conference.dagger.component.FragmentComponent;
@@ -108,7 +108,7 @@ public abstract class BaseFragment extends Fragment implements BaseView, EasyPer
 
     public FragmentComponent getFragmentComponent() {
         return DaggerFragmentComponent.builder()
-                .applicationComponent(EntApplication.getApplicationComponent())
+                .applicationComponent(ConApplication.getApplicationComponent())
                 .fragmentModule(new FragmentModule(this))
                 .build();
     }

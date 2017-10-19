@@ -5,7 +5,6 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.multidex.MultiDex;
 
-import com.blankj.utilcode.util.Utils;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreater;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreater;
@@ -19,13 +18,13 @@ import com.tuhua.conference.R;
 import com.tuhua.conference.dagger.component.ApplicationComponent;
 import com.tuhua.conference.dagger.component.DaggerApplicationComponent;
 import com.tuhua.conference.dagger.module.ApplicationModule;
+import com.tuhua.conference.service.InitializationService;
 
 /**
  * Application
  * Created by yangtufa on 2017/7/19.
  */
-public class EntApplication extends Application {
-
+public class ConApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
@@ -33,12 +32,7 @@ public class EntApplication extends Application {
         //保存全局Application对象
         ContextHolder.setApplication(this);
 
-        initUtil();
-    }
-
-    /***初始化工具类*/
-    private void initUtil() {
-        Utils.init(ContextHolder.getApplication());
+        InitializationService.start(this);
     }
 
     @Override

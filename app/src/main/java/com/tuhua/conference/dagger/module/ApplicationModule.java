@@ -1,7 +1,7 @@
 package com.tuhua.conference.dagger.module;
 
 
-import com.tuhua.conference.base.app.EntApplication;
+import com.tuhua.conference.base.app.ConApplication;
 import com.tuhua.conference.http.EntApi;
 import com.tuhua.conference.http.RetrofitHelper;
 
@@ -16,15 +16,15 @@ import dagger.Provides;
 @Module
 public class ApplicationModule {
 
-    private final EntApplication bookApplication;
+    private final ConApplication bookApplication;
 
-    public ApplicationModule(EntApplication bookApplication) {
+    public ApplicationModule(ConApplication bookApplication) {
         this.bookApplication = bookApplication;
     }
 
     @Singleton
     @Provides
-    EntApplication providesApplication() {
+    ConApplication providesApplication() {
         return bookApplication;
     }
 

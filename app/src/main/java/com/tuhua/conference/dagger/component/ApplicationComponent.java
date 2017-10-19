@@ -1,7 +1,7 @@
 package com.tuhua.conference.dagger.component;
 
 
-import com.tuhua.conference.base.app.EntApplication;
+import com.tuhua.conference.base.app.ConApplication;
 import com.tuhua.conference.dagger.module.ApplicationModule;
 import com.tuhua.conference.dagger.module.HttpModule;
 import com.tuhua.conference.http.RetrofitHelper;
@@ -17,7 +17,7 @@ import okhttp3.OkHttpClient;
 @Singleton
 @Component(modules = {ApplicationModule.class, HttpModule.class})
 public interface ApplicationComponent {
-    EntApplication getApplication();
+    ConApplication getApplication();
 
     RetrofitHelper getRetrofitHelper();
 

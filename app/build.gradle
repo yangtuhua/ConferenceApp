@@ -11,12 +11,15 @@ android {
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
 
         ndk {
             //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
             abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "arm64-v8a", "x86_64"
         }
     }
+    //use legacy for android 6.0
+    useLibrary 'org.apache.http.legacy'
     packagingOptions {
         exclude 'META-INF/rxjava.properties'
     }
@@ -153,14 +156,14 @@ dependencies {
     compile "top.zibin:Luban:$rootProject.ext.imageCompressVersion"
     //activeAndroid数据库
     compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
-
-
     //高德地图
     compile 'com.amap.api:location:latest.integration'
-    //
     compile 'com.amap.api:search:latest.integration'
-    //
     compile 'com.amap.api:3dmap:latest.integration'
-    //
 //    compile 'com.amap.api:map2d:latest.integration'
+    //环信
+    compile 'com.google.android.gms:play-services-gcm:11.0.4'
+//    compile 'com.hyphenate:hyphenate-sdk:3.3.0'
+    //不含语音视频
+    compile 'com.hyphenate:hyphenate-sdk-lite:3.3.0'
 }

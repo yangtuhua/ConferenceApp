@@ -11,7 +11,7 @@ import com.bumptech.glide.load.engine.cache.InternalCacheDiskCacheFactory;
 import com.bumptech.glide.load.engine.cache.LruResourceCache;
 import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.module.GlideModule;
-import com.tuhua.conference.base.app.EntApplication;
+import com.tuhua.conference.base.app.ConApplication;
 
 import java.io.InputStream;
 
@@ -46,7 +46,7 @@ public class GlideConfigModule implements GlideModule {
 
     @Override
     public void registerComponents(Context context, Glide glide) {
-        OkHttpClient okHttpClient = EntApplication.getApplicationComponent().getOkhttpClient();
+        OkHttpClient okHttpClient = ConApplication.getApplicationComponent().getOkhttpClient();
         glide.register(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory(okHttpClient));
     }
 }

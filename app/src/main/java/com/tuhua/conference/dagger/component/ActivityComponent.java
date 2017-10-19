@@ -4,6 +4,7 @@ import android.app.Activity;
 
 import com.tuhua.conference.dagger.module.ActivityModule;
 import com.tuhua.conference.dagger.scope.ActivityScope;
+import com.tuhua.conference.view.home.MainActivity;
 
 import dagger.Component;
 
@@ -16,4 +17,5 @@ public interface ActivityComponent {
 
     Activity getActivity();
 
+    void inject(MainActivity activity);
 }

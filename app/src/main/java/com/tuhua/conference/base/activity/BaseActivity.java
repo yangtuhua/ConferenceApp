@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.blankj.utilcode.util.ToastUtils;
 import com.facebook.stetho.common.LogUtil;
 import com.tuhua.conference.R;
-import com.tuhua.conference.base.app.EntApplication;
+import com.tuhua.conference.base.app.ConApplication;
 import com.tuhua.conference.base.mvp.BaseView;
 import com.tuhua.conference.dagger.component.ActivityComponent;
 import com.tuhua.conference.dagger.component.DaggerActivityComponent;
@@ -85,7 +85,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
     /*** 提供获取activityComponent的方法*/
     protected ActivityComponent getActivityComponent() {
         return DaggerActivityComponent.builder()
-                .applicationComponent(EntApplication.getApplicationComponent())
+                .applicationComponent(ConApplication.getApplicationComponent())
                 .activityModule(new ActivityModule(this))
                 .build();
     }
