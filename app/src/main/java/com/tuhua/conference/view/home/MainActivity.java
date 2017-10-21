@@ -38,7 +38,7 @@ public class MainActivity extends BaseActivity {
         Observable.create(new ObservableOnSubscribe<Boolean>() {
             @Override
             public void subscribe(@NonNull ObservableEmitter<Boolean> observableEmitter) throws Exception {
-                EMClient.getInstance().createAccount("13660260845", "123yangtuhua");//同步方法
+                EMClient.getInstance().createAccount("790699763", "123yangtuhua");//同步方法
                 observableEmitter.onNext(true);
             }
         }).compose(RxUtil.<Boolean>rxObservableHelper()).subscribe(new Consumer<Boolean>() {
