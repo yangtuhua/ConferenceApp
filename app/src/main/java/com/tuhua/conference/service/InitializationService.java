@@ -5,6 +5,7 @@ import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.Nullable;
 
 import com.blankj.utilcode.util.AppUtils;
@@ -13,6 +14,8 @@ import com.blankj.utilcode.util.Utils;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
 import com.tuhua.conference.base.app.ContextHolder;
+import com.tuhua.conference.database.vo.DaoMaster;
+import com.tuhua.conference.database.vo.DaoSession;
 
 import java.util.Iterator;
 import java.util.List;
@@ -42,7 +45,17 @@ public class InitializationService extends IntentService {
 
         initEMSDK();
 
+        initGreenDao();
+
         LogUtils.e("初始化完成！");
+    }
+
+    /***初始化greenDao*/
+    private void initGreenDao() {
+        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, "conference-db", null);
+        SQLiteDatabase db = helper.getWritableDatabase();
+        DaoMaster daoMaster = new DaoMaster(db);
+        DaoSession daoSession = daoMaster.newSession();
     }
 
     /***初始化环信*/

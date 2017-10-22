@@ -18,6 +18,7 @@ import com.tuhua.conference.R;
 import com.tuhua.conference.dagger.component.ApplicationComponent;
 import com.tuhua.conference.dagger.component.DaggerApplicationComponent;
 import com.tuhua.conference.dagger.module.ApplicationModule;
+import com.tuhua.conference.service.InitializationService;
 
 /**
  * Application
@@ -30,6 +31,7 @@ public class ConApplication extends Application {
         //保存全局Application对象
         ContextHolder.setApplication(this);
 
+        InitializationService.start(this);
     }
 
     @Override

@@ -89,6 +89,10 @@ repositories {
     }
 }
 
+greendao {
+    schemaVersion 1
+    generateTests true
+}
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
