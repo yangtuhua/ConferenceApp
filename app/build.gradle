@@ -6,7 +6,7 @@ android {
     buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.tuhua.conference"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
         versionName "1.0.0"
@@ -143,7 +143,7 @@ dependencies {
     //下拉刷新库
     compile "com.scwang.smartrefresh:SmartRefreshLayout:$rootProject.ext.smartRefreshVersion"
     //没有使用特殊Header，可以不加这行
-//    compile "com.scwang.smartrefresh:SmartRefreshHeader:$rootProject.ext.smartRefreshVersion"
+    compile "com.scwang.smartrefresh:SmartRefreshHeader:$rootProject.ext.smartRefreshVersion"
     //工具类
     compile "com.blankj:utilcode:$rootProject.ext.utilVersion"
     //photoView
@@ -158,6 +158,8 @@ dependencies {
     compile "top.zibin:Luban:$rootProject.ext.imageCompressVersion"
     //greenDao
     compile "org.greenrobot:greendao:$rootProject.ext.greenDaoVersion"
+    //视频播放器
+    compile 'cn.jzvd:jiaozivideoplayer:6.0.2'
     //高德地图
     compile 'com.amap.api:location:latest.integration'
     compile 'com.amap.api:search:latest.integration'

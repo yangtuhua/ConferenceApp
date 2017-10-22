@@ -5,6 +5,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.multidex.MultiDex;
 
+import com.scwang.smartrefresh.header.MaterialHeader;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreater;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreater;
@@ -13,8 +14,6 @@ import com.scwang.smartrefresh.layout.api.RefreshHeader;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
-import com.scwang.smartrefresh.layout.header.ClassicsHeader;
-import com.tuhua.conference.R;
 import com.tuhua.conference.dagger.component.ApplicationComponent;
 import com.tuhua.conference.dagger.component.DaggerApplicationComponent;
 import com.tuhua.conference.dagger.module.ApplicationModule;
@@ -46,8 +45,9 @@ public class ConApplication extends Application {
             @NonNull
             @Override
             public RefreshHeader createRefreshHeader(Context context, RefreshLayout layout) {
-                layout.setPrimaryColorsId(R.color.color_f3f5f0, R.color.color_333);//全局设置主题颜色
-                return new ClassicsHeader(context).setSpinnerStyle(SpinnerStyle.Translate);//指定为经典Header，默认是 贝塞尔雷达Header
+                //刷新时是否允许内容滑动
+                layout.setEnableHeaderTranslationContent(false);
+                return new MaterialHeader(context).setShowBezierWave(false);
             }
         });
         SmartRefreshLayout.setDefaultRefreshFooterCreater(new DefaultRefreshFooterCreater() {

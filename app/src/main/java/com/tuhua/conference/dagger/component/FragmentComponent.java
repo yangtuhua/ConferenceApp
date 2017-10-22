@@ -4,6 +4,7 @@ import android.app.Activity;
 
 import com.tuhua.conference.dagger.module.FragmentModule;
 import com.tuhua.conference.dagger.scope.FragmentScope;
+import com.tuhua.conference.view.home.fragment.HomeFragment;
 
 import dagger.Component;
 
@@ -15,4 +16,5 @@ import dagger.Component;
 public interface FragmentComponent {
     Activity getActivity();
 
+    void inject(HomeFragment fragment);
 }

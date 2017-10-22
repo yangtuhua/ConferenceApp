@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    style="@style/baseToolbarStyle"
+    android:layout_marginBottom="@dimen/margin_0.5"
+    app:contentInsetStartWithNavigation="0dp"
+    app:titleTextColor="@color/color_000">
+
+    <com.tuhua.conference.wiget.tabIndicator.MagicIndicator
+        android:id="@+id/magicIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_50"
+        android:layout_marginRight="@dimen/margin_50"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/margin_2" />
+</android.support.v7.widget.Toolbar>

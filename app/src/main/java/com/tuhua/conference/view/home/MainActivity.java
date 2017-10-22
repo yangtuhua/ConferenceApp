@@ -3,7 +3,6 @@ package com.tuhua.conference.view.home;
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -33,8 +32,6 @@ public class MainActivity extends BaseActivity {
     RadioButton radio1;
     @BindView(R.id.radioGroup)
     RadioGroup radioGroup;
-    @BindView(R.id.container)
-    LinearLayout container;
 
     private Fragment currentFragment;
     private Fragment selectedFragment;

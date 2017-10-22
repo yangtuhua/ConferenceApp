@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="homePageArray">
+        <item>分类</item>
+        <item>大神</item>
+        <item>同城</item>
+    </array>
+</resources>

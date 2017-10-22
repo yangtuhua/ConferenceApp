@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5"
+        android:background="@color/color_eee" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_home_black_24dp"
+            android:gravity="center"
+            android:text="首页"
+            android:textSize="@dimen/font_14" />
+
+        <RadioButton
+            android:id="@+id/radio_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_notifications_black_24dp"
+            android:gravity="center"
+            android:text="我的"
+            android:textSize="@dimen/font_14" />
+    </RadioGroup>
+</LinearLayout>
