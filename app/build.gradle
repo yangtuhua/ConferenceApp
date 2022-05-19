@@ -64,23 +64,6 @@ android {
         }
     }
 
-    //打包后应用名称
-    applicationVariants.all { variant ->
-        variant.outputs.each { output ->
-            def outputFile = output.outputFile
-            def fileName
-            if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                if (variant.buildType.name == 'release') {
-                    fileName = "conferenceAndroid.${defaultConfig.versionName}.apk"
-                } else if (variant.buildType.name == 'debug') {
-                    fileName = "conferenceAndroid.${defaultConfig.versionName}_debug.apk"
-                } else {
-                    fileName = "conferenceAndroid.${defaultConfig.versionName}.apk"
-                }
-                output.outputFile = new File(outputFile.parent, fileName)
-            }
-        }
-    }
 }
 
 repositories {
